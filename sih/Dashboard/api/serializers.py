@@ -29,6 +29,7 @@ class PlaceLocationRetrieveSerializer(ModelSerializer):
 
 
 class GeographicalLocationListSerializer(ModelSerializer):
+	city = HyperlinkedRelatedField(read_only=True, view_name='location-retrieve')
 	class Meta:
 		model = GeographicalLocation
 		fields = ("id","city","name","type","longitude","latitude","description","history")

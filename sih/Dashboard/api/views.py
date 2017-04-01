@@ -28,16 +28,13 @@ class PlaceLocationCreate(CreateAPIView):
 class PlaceLocationRetrive(RetrieveAPIView):
 	queryset = PlaceLocation.objects.all()
 	serializer_class = PlaceLocationRetrieveSerializer
-	lookup_field = 'name'
-	lookup_url_kwarg = "name"
+	
 
 
 class PlaceLocationUpdate(RetrieveUpdateDestroyAPIView):
 	queryset = PlaceLocation.objects.all()
 	serializer_class = PlaceLocationUpdateSerializer
-	lookup_field = 'name'
-	lookup_url_kwarg = "name"
-
+	
 
 
 class GeographicalLocationList(ListAPIView):
@@ -54,11 +51,9 @@ class GeographicalLocationCreate(CreateAPIView):
 class GeographicalLocationRetrieve(RetrieveAPIView):
 	queryset = GeographicalLocation.objects.all()
 	serializer_class = GeographicalLocationRetrieveSerializer
-
 	
 
 class GeographicalLocationUpdate(RetrieveUpdateDestroyAPIView):
 	queryset = GeographicalLocation.objects.all()
 	serializer_class = GeographicalLocationUpdateSerializer
-
 	

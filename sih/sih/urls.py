@@ -31,14 +31,14 @@ from Dashboard.api.views import (
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/location/list/$', PlaceLocationList.as_view(), name='user-list'), 
-    url(r'^api/location/create/$', PlaceLocationCreate.as_view(), name='user-list'), 
-    url(r'^api/location/retrive/(?P<name>[\w-]+)$', PlaceLocationRetrive.as_view(), name='user-list'), 
-    url(r'^api/location/update/(?P<name>[\w-]+)$', PlaceLocationUpdate.as_view(), name='user-list'), 
-    url(r'^api/geolocation/list/$', GeographicalLocationList.as_view(), name='user-list'), 
-    url(r'^api/geolocation/create/$', GeographicalLocationCreate.as_view(), name='user-list'), 
-    url(r'^api/geolocation/retrieve/(?P<name>[\w-]+)$', GeographicalLocationRetrieve.as_view(), name='user-list'), 
-    url(r'^api/geolocation/update/(?P<name>[\w-]+)$', GeographicalLocationUpdate.as_view(), name='user-list'), 
+    url(r'^api/location/list/$', PlaceLocationList.as_view(), name='location-list'), 
+    url(r'^api/location/create/$', PlaceLocationCreate.as_view(), name='location-create'), 
+    url(r'^api/location/retrieve/(?P<pk>[\d]+)/$', PlaceLocationRetrive.as_view(), name='location-retrieve'), 
+    url(r'^api/location/update/(?P<pk>[\d]+)/$', PlaceLocationUpdate.as_view(), name='location-update'), 
+    url(r'^api/geolocation/list/$', GeographicalLocationList.as_view(), name='geolocation-list'), 
+    url(r'^api/geolocation/create/$', GeographicalLocationCreate.as_view(), name='geolocation-create'), 
+    url(r'^api/geolocation/retrieve/(?P<pk>[\d]+)/$', GeographicalLocationRetrieve.as_view(), name='geolocation-retrieve'), 
+    url(r'^api/geolocation/update/(?P<pk>[\d]+)/$', GeographicalLocationUpdate.as_view(), name='geolocation-update	'), 
     
 ]
 
